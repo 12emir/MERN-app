@@ -5,6 +5,7 @@ import NewPlace from './places/pages/NewPlace'
 import Unsplash from './other/Unsplash'
 
 import MainNavigation from './shared/components/navigation/MainNavigation'
+import UserPlaces from './places/pages/UserPlaces'
 
 const App = () => {
   return <Router>
@@ -20,6 +21,11 @@ const App = () => {
         <Route path="/places/new" exact >
           <NewPlace />
         </Route>
+
+        <Route path="/:userId/places" exact >
+          <UserPlaces />
+        </Route>
+
         <Route path="/other/unsplash" exact >
           <Unsplash />
         </Route>

@@ -11,7 +11,6 @@ const Unsplash = () => {
     const fetchImages = (count = 6) => {
         const apiRoot = "https://api.unsplash.com";
         const accessKey = "7be1cc600f228bc8b1b4f86115faeefca6824ee1988242547a8395ae2bb64742";
-
         axios
             .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
             .then(res => {
